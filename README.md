@@ -10,7 +10,7 @@ A robust and user-friendly **Notes App** built with the **MERN** stack (**MongoD
 ✅ **Create, Edit, and Delete Notes.**\
 ✅ **Search & Filter for Quick Access.**\
 ✅ **Secure Data Storage with MongoDB.**\
-✅ **User Authentication (using JWT).**
+✅ **User Authentication (using JWT).**\
 ✅ **Toast Messages (using toastify).**
 
 ---
