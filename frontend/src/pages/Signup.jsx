@@ -14,7 +14,7 @@ const Signup = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/auth/register', { name, email, password });
-            if(response.data.success){
+            if (response.data.success) {
                 navigate('/login');
                 toast.success("Registered Successfully");
             }
@@ -24,9 +24,9 @@ const Signup = () => {
     }
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="border shadow p-6 w-80 bg-white">
-                <h2 className="text-2xl font-bold mb-4">Signup</h2>
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+            <div className="border shadow p-6 w-full max-w-sm bg-white">
+                <h2 className="text-2xl font-bold mb-4 text-center">Signup</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-gray-700">Name</label>

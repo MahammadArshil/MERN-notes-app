@@ -2,11 +2,11 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 
 const NoteCard = ({ note, onEdit, deleteNote }) => {
   return (
-    <div className="bg-white p-4 rounded shadow">
+    <div className="bg-white p-4 rounded shadow-md hover:shadow-lg transition-all duration-300">
       <h2 className="text-xl font-bold">{note.title}</h2>
-      <p className="overflow-hidden text-ellipsis break-words">{note.description}</p>
+      <p className="text-gray-700 truncate">{note.description}</p>
       <div className="flex justify-end mt-2">
-        <button className="text-blue-500 mr-2" onClick={()=> onEdit(note)}>
+        <button className="text-blue-500 mr-2" onClick={() => onEdit(note)}>
           <FaEdit />
         </button>
         <button className="text-red-500" onClick={() => deleteNote(note._id)}>
@@ -18,4 +18,3 @@ const NoteCard = ({ note, onEdit, deleteNote }) => {
 };
 
 export default NoteCard;
-

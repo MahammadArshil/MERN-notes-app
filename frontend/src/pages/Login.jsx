@@ -8,13 +8,13 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const {login} = useAuth();
+    const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-            if(response.data.success){
+            if (response.data.success) {
                 login(response.data.user);
                 localStorage.setItem("token", response.data.token);
                 navigate('/');
@@ -27,9 +27,9 @@ const Login = () => {
     }
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="border shadow p-6 w-80 bg-white">
-                <h2 className="text-2xl font-bold mb-4">Login</h2>
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+            <div className="border shadow p-6 w-full max-w-sm bg-white">
+                <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-gray-700">Email</label>
