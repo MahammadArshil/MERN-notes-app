@@ -22,7 +22,7 @@ Follow these steps to set up and run the project locally:
 ### 📂 1. Clone the Repository
 
 ```sh
- git clone https://github.com/mahammadarshil/notes-app.git
+ git clone https://github.com/mahammadarshil/MERN-notes-app.git
  cd notes-app
 ```
 
